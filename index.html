@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f5c4d">
+<meta name="description" content="Theo dõi tin tức tài chính - kinh tế - chính sách trong 5 phút">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="5-min Horizon">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>5-min Horizon</title>
+<style>
+:root{--bg:#f6f5f1;--card:#fff;--tx:#1d1d1b;--mut:#6b6a64;--ln:#e3e1d9;--ac:#0f5c4d;--up:#0f7a4a;--dn:#b3261e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#151513;--card:#1f1f1c;--tx:#ecebe5;--mut:#9a988f;--ln:#34332e;--ac:#5fc2ab;--up:#4cc58a;--dn:#ff7b72}}
+:root[data-theme="dark"]{--bg:#151513;--card:#1f1f1c;--tx:#ecebe5;--mut:#9a988f;--ln:#34332e;--ac:#5fc2ab;--up:#4cc58a;--dn:#ff7b72}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.6 Georgia,"Times New Roman",serif;-webkit-text-size-adjust:100%}
+main{max-width:720px;margin:0 auto;padding:16px 16px 48px}
+h1{font-size:38px;line-height:1.1;letter-spacing:-.02em;margin:0}h2{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);margin:28px 0 10px;font-family:system-ui,sans-serif}
+.sub{color:var(--mut);font:13px system-ui,sans-serif;margin-top:4px}
+.grid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;margin:0 -16px;padding-left:16px;padding-right:16px;-webkit-overflow-scrolling:touch}.grid .k{flex:0 0 158px;scroll-snap-align:start}
+.k{background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:12px 14px;font-family:system-ui,sans-serif}
+.k b{display:block;font-size:12px;color:var(--mut);font-weight:500}.k .v{font-size:21px;font-weight:600;margin:2px 0}.k small{color:var(--mut);font-size:12px}
+.up{color:var(--up)}.dn{color:var(--dn)}
+.tabs{display:flex;gap:6px;margin-bottom:10px;font-family:system-ui,sans-serif}
+.tabs button{border:1px solid var(--ln);background:var(--card);color:var(--tx);padding:10px 20px;border-radius:99px;cursor:pointer;font-size:15px;flex:1}
+.tabs button.on{background:var(--ac);color:var(--bg);border-color:var(--ac)}
+.item{background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.item h3{font-size:17px;line-height:1.35;margin:0 0 4px}.item p{margin:6px 0 0;color:var(--mut);font-size:15px}.item.c{cursor:pointer}.item.c h3{padding-right:22px;position:relative}.item.c h3::after{content:"+";position:absolute;right:0;top:0;font:20px/1.2 system-ui,sans-serif;color:var(--ac)}.item.c.open h3::after{content:"\2212"}.item.c:not(.open) p,.item.c:not(.open) .src{display:none}.sub2{font:600 15px system-ui,sans-serif;margin:18px 0 8px;color:var(--ac)}.sum h4{font:600 15px system-ui,sans-serif;margin:16px 0 4px}.sum p{margin:4px 0;font-size:16px}.hint{font:12px system-ui,sans-serif;color:var(--mut);margin:0 0 8px}.sum{background:var(--card);border:1px solid var(--ln);border-left:4px solid var(--ac);border-radius:10px;padding:12px 14px;margin-top:16px}.sum b{display:block;font:12px system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ac);margin-bottom:6px}.sum ul{margin:0;padding-left:18px}.sum li{margin:4px 0;font-size:16px}
+.tag{display:inline-block;font:11px system-ui,sans-serif;border:1px solid var(--ln);border-radius:99px;padding:1px 8px;margin-right:6px;color:var(--mut)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.ev{display:flex;gap:12px;background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:10px 14px;margin-bottom:8px;font-family:system-ui,sans-serif;font-size:14px}
+.ev .d{min-width:54px;font-weight:700;color:var(--ac)}
+.src{display:inline-block;margin-top:6px;font:12px system-ui,sans-serif;color:var(--ac);text-decoration:none}.src:hover{text-decoration:underline}.cm{background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:14px;font-family:system-ui,sans-serif}.cm textarea{width:100%;box-sizing:border-box;min-height:120px;border:1px solid var(--ln);border-radius:8px;padding:10px;background:var(--bg);color:var(--tx);font:15px/1.55 Georgia,serif;resize:vertical}.cm .row{display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap}.cm button{border:1px solid var(--ln);background:var(--card);color:var(--tx);padding:6px 14px;border-radius:99px;cursor:pointer;font-size:13px}.cm button.pri{background:var(--ac);color:var(--bg);border-color:var(--ac)}.cm .st{color:var(--mut);font-size:12px}.ent{border-top:1px solid var(--ln);padding:10px 0;white-space:pre-wrap;font-family:Georgia,serif}.ent b{display:block;font:12px system-ui,sans-serif;color:var(--ac);margin-bottom:2px}.ent i{font:12px system-ui,sans-serif;color:var(--mut);cursor:pointer;font-style:normal;margin-left:10px}.note{font:12px system-ui,sans-serif;color:var(--mut);margin-top:24px;border-top:1px solid var(--ln);padding-top:12px}
+</style></head><body><main>
+<h1>5-min Horizon</h1>
+<div class="sub" style="font-size:14px">5 phút cập nhật tin tức tài chính - kinh tế - chính sách</div>
+<div class="sub" style="font-size:12px;margin-top:2px;font-style:italic">Cập nhật ngày 11/11/2026, 10 giờ 30 phút</div>
+
+<div class="sum"><b>Đọc nhanh · 1 phút</b><ul>
+<li>VN-Index hồi 1,68% lên 1.743,07 (10/11); vùng cản 1.760–1.780, hỗ trợ quanh 1.700.</li>
+<li>NHNN mua ngoại tệ giao ngay từ 11/11 (thứ Hai, thứ Tư hằng tuần).</li>
+<li>Mỹ: CPI tháng 10 được báo nóng hơn dự báo, lo Fed tăng lãi suất; PPI công bố 13/11.</li>
+<li>Dầu Brent giảm khoảng 17% trong tuần, quanh 98 USD/thùng.</li>
+<li>Chính sách: Quốc hội xem xét Luật Giao dịch hàng hóa phái sinh; HNX chuyển sang HOSE cuối 2026.</li></ul></div>
+<h2>Chỉ số thị trường</h2>
+<div class="grid">
+<div class="k"><b>VN-Index (đóng cửa 10/11)</b><span class="v">1.743,07</span><small class="up">+28,75 (+1,68%)</small></div>
+<div class="k"><b>Tỷ giá trung tâm (SBV, 10/11)</b><span class="v">25.600</span><small class="dn">−10 đồng · VND/USD</small></div>
+<div class="k"><b>DXY (10/11)</b><span class="v">101,67</span><small class="dn">−0,59%</small></div>
+<div class="k"><b>Vàng SJC (sáng 10/11)</b><span class="v">147,6 – 149,6</span><small>triệu đồng/lượng (mua – bán)</small></div>
+<div class="k"><b>Vàng thế giới (10/11)</b><span class="v">≈ 4.045</span><small>USD/oz</small></div>
+<div class="k"><b>Dầu Brent / WTI (9/11)</b><span class="v">98,3 / 90,8</span><small>USD/thùng · Brent giảm ~17% trong tuần</small></div>
+</div>
+
+<h2>Tin nổi bật</h2>
+<div class="tabs"><button class="on" data-t="vn">Việt Nam</button><button data-t="wd">Thế giới</button></div>
+<div id="vn">
+<div class="item"><span class="tag">Chứng khoán</span><h3>VN-Index bật lại 1,68% sau chuỗi giảm</h3><p>VN-Index tăng 28,75 điểm lên 1.743,07, đóng cửa ở mức cao nhất phiên. Độ rộng nghiêng về bên mua (221 mã tăng, 94 mã giảm), sau phiên 9/11 giảm 11 điểm về 1.714,32. SHS cho rằng nhà đầu tư có thể cân nhắc tăng tỷ trọng khi chỉ số vượt đường xu hướng giảm kéo dài từ tháng 9 (đây là nhận định của SHS, không phải khuyến nghị). Chỉ số quay lại vùng 1.720–1.780 điểm; nhóm ngân hàng và Vingroup dẫn dắt. Kháng cự ngắn hạn 1.760–1.780, hỗ trợ quanh 1.700 (theo SHS).</p></div>
+<div class="item"><span class="tag">Tiền tệ</span><h3>NHNN mua ngoại tệ giao ngay từ 11/11</h3><p>Thông tin được công bố ngày 10/11 và nằm trong số yếu tố giúp VN-Index khởi sắc cùng ngày. Tỷ giá trung tâm sáng 10/11 là 25.600 đồng, giảm 10 đồng. Cần theo dõi khối lượng mua thực tế và phản ứng của tỷ giá trong những phiên đầu. Thực hiện vào thứ Hai và thứ Tư hằng tuần, được thị trường đón nhận tích cực.</p></div>
+
+<div class="item"><span class="tag">Năng lượng</span><h3>Diễn đàn An ninh năng lượng quốc gia 2026</h3><p>Diễn đàn tổ chức tại Hà Nội sáng 10/11 với chủ đề Năng lượng tự chủ, mạch máu của tăng trưởng hai con số, gắn với việc công bố Báo cáo An ninh năng lượng quốc gia Việt Nam. Bộ Công Thương tổ chức 10/11, chuyển tư duy từ “đủ cung” sang “an toàn – ổn định – tự chủ – bền vững” để phục vụ mục tiêu tăng trưởng từ 10%/năm giai đoạn 2026–2030.</p></div>
+<div class="item"><span class="tag">Hợp tác</span><h3>Bộ trưởng Tài chính làm việc với JBIC (Nhật Bản)</h3><p>Bộ trưởng Ngô Văn Tuấn làm việc tại Tokyo với ông Maeda Tadashi, Chủ tịch HĐQT JBIC, trong chuyến công tác Nhật Bản. Trước biến động chuỗi cung ứng toàn cầu, phía Việt Nam đề nghị JBIC tiếp tục phối hợp với các cơ quan Việt Nam và đối tác Nhật, phù hợp quy định pháp luật và thực tiễn. Đề nghị nghiên cứu cơ chế tài chính linh hoạt cho các dự án năng lượng, hạ tầng quy mô lớn.</p></div>
+<div class="item"><span class="tag">Hàng hóa</span><h3>Bảo đảm nguồn cung xăng dầu cuối năm 2026</h3><p>Thứ trưởng Nguyễn Việt Sơn làm việc với Cục Quản lý và Phát triển thị trường trong nước ngày 9/11, đánh giá tình hình thị trường và thảo luận giải pháp chủ động đáp ứng nhu cầu sản xuất, kinh doanh và tiêu dùng. Bộ Công Thương làm việc về bình ổn thị trường xăng dầu những tháng cuối năm và kế hoạch năm 2027.</p></div>
+<div class="item"><span class="tag">Thị trường vốn</span><h3>Cổ phiếu HNX chuyển sang HOSE vào cuối năm 2026</h3><p>Thông tin do bà Vũ Thị Thúy Ngà, Tổng Giám đốc HNX, cho biết tại Hội nghị doanh nghiệp thường niên ngày 10/11. HNX và HOSE sẽ phối hợp thực hiện việc chuyển giao để hoạt động diễn ra thông suốt. Theo lộ trình tái cấu trúc thị trường chứng khoán; HNX cho biết quyền lợi cổ đông và nhà đầu tư được bảo đảm.</p></div>
+<div class="item"><span class="tag">Quốc hội</span><h3>Trình dự án Luật Giao dịch hàng hóa phái sinh (11/11)</h3><p>Chính phủ trình Quốc hội dự án luật tại Kỳ họp thứ hai, Quốc hội khóa XVI. Dự án nhằm khắc phục hạn chế của khuôn khổ pháp lý hiện hành, tạo nền tảng để thị trường hàng hóa phái sinh phát triển có tổ chức, minh bạch, an toàn và từng bước hội nhập quốc tế. Nhằm hoàn thiện khung pháp lý cho thị trường phái sinh hàng hóa và công cụ phòng ngừa rủi ro giá.</p></div>
+<div class="item"><span class="tag">Ngân sách</span><h3>Quốc hội thông qua dự toán ngân sách 2027</h3><p>Cùng kỳ họp, Quốc hội cũng thảo luận Luật sửa đổi, bổ sung một số điều của 3 luật về thuế. Tôi mới có con số tổng thu; số liệu chi và bội chi chi tiết cần xem bài gốc. Tổng thu hơn 3,33 triệu tỷ đồng (theo điểm tin TTXVN ngày 9/11).</p></div>
+<div class="item"><span class="tag">Thuế &amp; giá</span><h3>Thuế tiêu thụ đặc biệt xăng về 0%, giảm 2% giá điện từ 1/11</h3><p>Hai biện pháp áp dụng từ 1/11/2026. Thủ tướng nhấn mạnh kiên định tăng trưởng hai con số, ưu tiên kiểm soát lạm phát và tăng tốc trong hai tháng cuối năm. Biện pháp hỗ trợ kiểm soát lạm phát trong bối cảnh Chính phủ kiên định mục tiêu tăng trưởng hai con số.</p></div>
+<div class="item"><span class="tag">Thương mại</span><h3>Hàng Việt vào Anh: ưu đãi thuế quan là chưa đủ</h3><p>Nhận định tại hội thảo Chiến lược tiếp cận thị trường Anh thông qua CPTPP và UKVFTA, do ITPC phối hợp Đại học Kinh tế TP.HCM tổ chức ngày 10/11. Dù có UKVFTA và CPTPP, doanh nghiệp phải đáp ứng tiêu chuẩn khắt khe và minh bạch chuỗi cung ứng.</p></div>
+
+
+</div>
+<div id="wd" hidden>
+<div class="item"><span class="tag">Mỹ</span><h3>CPI tháng 10 gây lo ngại Fed tăng lãi suất</h3><p>Báo cáo do Bộ Lao động Mỹ công bố ngày 10/11, sau khi thị trường chờ đợi từ đầu tuần (DXY lùi về 101,67 trước giờ công bố). Quan chức Fed trong ngày vẫn giữ quan điểm thận trọng rằng áp lực giá chưa chấm dứt; PPI sẽ công bố ngày 13/11. Vietstock đưa tin CPI nóng hơn dự báo, khiến khả năng nâng lãi suất tăng; trong khi một số báo khác ghi nhận giá thuê nhà tăng thấp hơn dự kiến. Cần đối chiếu số liệu gốc BLS.</p></div>
+<div class="item"><span class="tag">Phố Wall</span><h3>Bật hơn 2% ngày 9/11 nhờ dầu hạ nhiệt</h3><p>Dòng tiền quay lại thị trường khi giá dầu giảm xoa dịu lo ngại lạm phát. Đợt bán tháo cổ phiếu AI ngày 5/11 từng lan sang Việt Nam, khiến VN-Index giảm hai phiên liên tiếp. Sau tuần giảm mạnh nhất của S&amp;P 500 kể từ 4/2025; đợt bán tháo cổ phiếu AI ngày 5/11 từng lan sang thị trường Việt Nam.</p></div>
+<div class="item"><span class="tag">Việc làm Mỹ</span><h3>Tăng việc làm tăng tốc trong tháng 10</h3><p>Thị trường chờ CPI ngày 10/11 và PPI ngày 13/11 để đánh giá rõ hơn lập trường chính sách tiền tệ của Fed (theo Bnews, 9/11). Tỷ lệ thất nghiệp giảm xuống 4,1%.</p></div>
+<div class="item"><span class="tag">Trung Quốc</span><h3>Thặng dư thương mại vượt 1.000 tỷ USD</h3><p>Thặng dư thương mại Trung Quốc đang trên đà vượt kỷ lục 1.200 tỷ USD của năm ngoái. Thặng dư với EU lên 310,7 tỷ USD, buộc EU đàm phán hạn chế nhập khẩu xe hybrid từ Trung Quốc. Lũy kế 10 tháng đạt 1.040 tỷ USD; xuất khẩu tháng 10 tăng 35,2% lên 412,3 tỷ USD nhờ nhu cầu sản phẩm AI. EU đang đàm phán hạn chế xe hybrid Trung Quốc.</p></div>
+<div class="item"><span class="tag">Châu Á</span><h3>ADB: Đông Nam Á cần 7.100 tỷ USD hạ tầng đến 2040</h3><p>Điện lực và giao thông chiếm tới 85% tổng nhu cầu; ngân sách nhà nước chỉ đáp ứng khoảng 45%. ADB cho rằng các nước cần minh bạch và khung pháp lý tốt hơn để thu hút vốn tư nhân. Nhu cầu khoảng 476 tỷ USD/năm (8,7% GDP khu vực), thiếu hụt 264 tỷ USD mỗi năm.</p></div>
+<div class="item"><span class="tag">Công nghệ</span><h3>Nvidia: vụ việc liên quan CEO làm giảm niềm tin vào ngành AI</h3><p>Hội đồng quản trị xác nhận chưa có dấu hiệu xâm phạm an ninh quốc gia, nhưng vị trí của CEO vẫn được cho là bị lung lay. Nvidia nắm khoảng 90% thị phần chip AI toàn cầu nên giới phân tích lo hiệu ứng lan sang cả ngành và rủi ro pháp lý từ Quốc hội Mỹ. Cần kiểm chứng thêm. Theo TTXVN, hội đồng quản trị chưa thấy dấu hiệu xâm phạm an ninh quốc gia; giới phân tích lo ngại tác động lan tỏa đến ngành công nghệ.</p></div>
+<div class="item"><span class="tag">Dầu mỏ</span><h3>Brent giảm khoảng 17% trong tuần</h3><p>Brent khoảng 98,3 USD/thùng, WTI khoảng 90,8 USD (9/11). Trước đó Brent từng đóng cửa ở 116,7 USD ngày 23/10, mức cao nhất kể từ cuối tháng 4. Tín hiệu ngoại giao về Trung Đông và triển vọng ổn định nguồn cung kéo giá xuống, xoa dịu lo ngại lạm phát.</p></div>
+<div class="item"><span class="tag">Hàn Quốc</span><h3>Samsung và Hyundai mở rộng hợp tác AI vật lý, robot</h3><p>Hai tập đoàn nhất trí mở rộng hợp tác chiến lược trong AI vật lý, phương tiện thế hệ mới và robot, kết hợp thế mạnh bán dẫn, pin, màn hình của Samsung với xe điện và lái xe tự hành của Hyundai. Kết hợp thế mạnh bán dẫn, pin của Samsung với xe điện và lái xe tự hành của Hyundai.</p></div>
+
+<div class="item"><span class="tag">Doanh nghiệp</span><h3>Boeing cắt giảm khoảng 5% nhân sự bộ phận máy bay thương mại</h3><p>Thông báo ngày 9/11; cắt giảm qua sa thải và giảm nhân lực tự nhiên. Ban lãnh đạo cho rằng việc này giúp nhà máy và chuỗi cung ứng ổn định, giải quyết các thách thức về chất lượng và an toàn. Bắt đầu từ tháng 12/2026; lùi mục tiêu sản xuất 52 chiếc 737 MAX/tháng sang nửa cuối 2027.</p></div>
+<div class="item"><span class="tag">Eurozone</span><h3>GDP quý III/2026 tăng 0,4%, vượt dự báo</h3><p>Mức tăng so với quý trước, cao hơn dự báo trước đó của giới phân tích. Số liệu Eurostat công bố ngày 30/10.</p></div>
+</div>
+
+<h2>Chính sách đáng theo dõi</h2>
+<div class="two">
+<div class="item"><span class="tag">SBV</span><h3>Mua ngoại tệ giao ngay định kỳ</h3><p>Công cụ mới để bổ sung dự trữ và ổn định tỷ giá; theo dõi khối lượng và phản ứng của tỷ giá liên ngân hàng.</p></div>
+<div class="item"><span class="tag">Fed</span><h3>Triển vọng lãi suất cuối năm</h3><p>Thị trường định giá lại khả năng tăng lãi suất sau CPI; quan chức Fed giữ giọng thận trọng.</p></div>
+</div>
+
+<h2>Lịch sự kiện sắp tới</h2>
+<div class="ev"><span class="d">11/11</span><span>NHNN bắt đầu mua ngoại tệ giao ngay (thứ Hai &amp; thứ Tư hằng tuần)</span></div>
+<div class="ev"><span class="d">13/11</span><span>Mỹ công bố chỉ số giá sản xuất (PPI)</span></div>
+<div class="ev"><span class="d">T12</span><span>Cuộc họp chính sách của Fed (ngày cụ thể cần xác nhận)</span></div>
+
+<div class="note">Nguồn: VnEconomy, Thời báo Tài chính VN, Công Luận/SHS, HTV–NewZMoney, VietTimes, Vietstock, SGĐT. Tin Việt Nam và thế giới lấy chủ yếu từ điểm tin TTXVN/Bnews ngày 9–10/11. Một số kết quả tìm kiếm lẫn số liệu các năm khác nhau nên các con số đã chọn theo mốc 2026 khớp nhất; riêng giá vàng, CPI Mỹ và VN-Index phiên 11/11 chưa xác minh chéo. Đây không phải khuyến nghị đầu tư.</div>
+</main>
+<script>
+document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){
+document.querySelectorAll('.tabs button').forEach(function(x){x.classList.toggle('on',x===b)});
+document.getElementById('vn').hidden=b.dataset.t!=='vn';document.getElementById('wd').hidden=b.dataset.t!=='wd';});});
+(function(){var B='https://baomoi.com/',CL=B+'chung-khoan-hom-nay-10-11-2026-vn-index-tang-gan-29-diem-dong-tien-gia-tang-c56478609.epi',VD=B+'diem-tin-kinh-te-viet-nam-noi-bat-ngay-10-11-2026-c56480269.epi',TT='https://baotintuc.vn/diem-tin-kinh-te-the-gioi-noi-bat-ngay-10112026-post1401617.html',VS='https://vietstock.vn/2026/11/fed-don-tin-buon-cpi-my-tang-nong-hon-du-bao-kha-nang-nang-lai-suat-gia-tang-775-1513617.htm',HT='https://htv.vn/bat-song-thi-truong-8-11-2026-gia-vang-sjc-di-ngang-dau-the-gioi-giam-sau-dong-usd-bien-dong-trai-chieu-newzmoney-222261108072711209.htm';
+var C=['Công Luận/SHS',CL],V=['Bnews (Báo Mới)',VD],T=['TTXVN',TT];
+var S=[['#vn .item',[C,C,V,V,V,V,V,['TTXVN (Báo Mới)',B+'diem-tin-kinh-te-viet-nam-noi-bat-ngay-9-11-2026-c56471530.epi'],['Mekong ASEAN','https://mekongasean.vn/tang-toc-hai-thang-cuoi-nam-kien-dinh-muc-tieu-tang-truong-hai-con-so-61456.html'],V]],['#wd .item',[['Vietstock',VS],['SGĐT (Báo Mới)',B+'pho-wall-tang-hon-2-nho-gia-dau-ha-nhiet-c56473278.epi'],['Bnews (Báo Mới)',B+'gia-vang-chieu-9-11-vang-sjc-dao-chieu-di-xuong-c56469709.epi'],T,T,T,['HTV – NewZMoney',HT],T,T,['TTXVN (Báo Mới)',B+'diem-tin-kinh-te-the-gioi-noi-bat-ngay-30-10-2026-c56393942.epi']]],['.two .item',[C,['Vietstock',VS]]]];
+S.forEach(function(g){document.querySelectorAll(g[0]).forEach(function(el,i){var s=g[1][i];if(!s)return;var a=document.createElement('a');a.className='src';a.href=s[1];a.target='_blank';a.rel='noopener noreferrer';a.textContent='Nguồn: '+s[0]+' ↗';el.appendChild(a);});});
+})();
+</script><script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("./sw.js").catch(function(){});});}</script>
+</body></html>
