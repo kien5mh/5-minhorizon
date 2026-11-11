@@ -28,7 +28,7 @@ h1{font-size:38px;line-height:1.1;letter-spacing:-.02em;margin:0}h2{font-size:12
 .tabs button{border:1px solid var(--ln);background:var(--card);color:var(--tx);padding:10px 20px;border-radius:99px;cursor:pointer;font-size:15px;flex:1}
 .tabs button.on{background:var(--ac);color:var(--bg);border-color:var(--ac)}
 .item{background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:12px 14px;margin-bottom:8px}
-.item h3{font-size:17px;line-height:1.35;margin:0 0 4px}.item p{margin:6px 0 0;color:var(--mut);font-size:15px}.item.c{cursor:pointer}.item.c h3{padding-right:22px;position:relative}.item.c h3::after{content:"+";position:absolute;right:0;top:0;font:20px/1.2 system-ui,sans-serif;color:var(--ac)}.item.c.open h3::after{content:"\2212"}.item.c:not(.open) p,.item.c:not(.open) .src{display:none}.sub2{font:600 15px system-ui,sans-serif;margin:18px 0 8px;color:var(--ac)}.sum h4{font:600 15px system-ui,sans-serif;margin:16px 0 4px}.sum p{margin:4px 0;font-size:16px}.hint{font:12px system-ui,sans-serif;color:var(--mut);margin:0 0 8px}.sum{background:var(--card);border:1px solid var(--ln);border-left:4px solid var(--ac);border-radius:10px;padding:12px 14px;margin-top:16px}.sum b{display:block;font:12px system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ac);margin-bottom:6px}.sum ul{margin:0;padding-left:18px}.sum li{margin:4px 0;font-size:16px}
+.item h3{font-size:17px;line-height:1.35;margin:0 0 4px}.item p{margin:6px 0 0;color:var(--mut);font-size:15px}.item.c{cursor:pointer}.item.c h3{padding-right:22px;position:relative}.item.c h3::after{content:"+";position:absolute;right:0;top:0;font:20px/1.2 system-ui,sans-serif;color:var(--ac)}.item.c.open h3::after{content:"\2212"}.item.c:not(.open) p,.item.c:not(.open) .src{display:none}.sub2{font:600 15px system-ui,sans-serif;margin:18px 0 8px;color:var(--ac)}.sum h4{font:600 15px system-ui,sans-serif;margin:16px 0 4px}.sum p{margin:4px 0;font-size:16px}.inst{display:flex;gap:8px;margin-top:14px;font-family:system-ui,sans-serif}.inst[hidden],.ins-help[hidden]{display:none}.inst button{flex:1;border:0;background:var(--ac);color:var(--bg);padding:12px 8px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;font-family:system-ui,sans-serif}.ins-help{margin-top:10px;background:var(--card);border:1px solid var(--ln);border-left:4px solid var(--ac);border-radius:10px;padding:12px 14px;font:15px/1.5 system-ui,sans-serif}.ins-help ol{margin:6px 0 0;padding-left:20px}.ins-help .x{float:right;cursor:pointer;color:var(--mut);padding:0 4px}.hint{font:12px system-ui,sans-serif;color:var(--mut);margin:0 0 8px}.sum{background:var(--card);border:1px solid var(--ln);border-left:4px solid var(--ac);border-radius:10px;padding:12px 14px;margin-top:16px}.sum b{display:block;font:12px system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ac);margin-bottom:6px}.sum ul{margin:0;padding-left:18px}.sum li{margin:4px 0;font-size:16px}
 .tag{display:inline-block;font:11px system-ui,sans-serif;border:1px solid var(--ln);border-radius:99px;padding:1px 8px;margin-right:6px;color:var(--mut)}
 .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
 .ev{display:flex;gap:12px;background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:10px 14px;margin-bottom:8px;font-family:system-ui,sans-serif;font-size:14px}
@@ -38,6 +38,8 @@ h1{font-size:38px;line-height:1.1;letter-spacing:-.02em;margin:0}h2{font-size:12
 <div style="display:flex;align-items:center;gap:12px"><svg width="52" height="52" viewBox="0 0 512 512" aria-hidden="true" style="flex:none"><rect width="512" height="512" rx="112" fill="#0f5c4d"/><g stroke="#f2b441" stroke-width="16" stroke-linecap="round"><line x1="358.4" y1="302.6" x2="402.8" y2="290.7"/><line x1="320.5" y1="245.9" x2="348.5" y2="209.4"/><line x1="256" y1="224" x2="256" y2="178"/><line x1="191.5" y1="245.9" x2="163.5" y2="209.4"/><line x1="153.6" y1="302.6" x2="109.2" y2="290.7"/></g><path d="M178 330A78 78 0 0 1 334 330Z" fill="#f2b441"/><line x1="120" y1="350" x2="392" y2="350" stroke="#f6f5f1" stroke-width="14" stroke-linecap="round"/></svg><h1>5-min Horizon</h1></div>
 <div class="sub" style="font-size:14px">5 phút cập nhật tin tức tài chính - kinh tế - chính sách</div>
 <div class="sub" style="font-size:12px;margin-top:2px;font-style:italic">Cập nhật ngày 11/11/2026, 10 giờ 30 phút</div>
+<div class="inst" id="inst"><button type="button" id="b-ios">Cài cho iPhone</button><button type="button" id="b-and">Cài cho Android</button></div>
+<div class="ins-help" id="ins-help" hidden></div>
 
 <div class="sum"><b>Đọc nhanh · 1 phút</b><ul>
 <li>VN-Index hồi 1,68% lên 1.743,07 (10/11); vùng cản 1.760–1.780, hỗ trợ quanh 1.700.</li>
@@ -109,4 +111,24 @@ var S=[['#vn .item',[C,C,V,V,V,V,V,['TTXVN (Báo Mới)',B+'diem-tin-kinh-te-vie
 S.forEach(function(g){document.querySelectorAll(g[0]).forEach(function(el,i){var s=g[1][i];if(!s)return;var a=document.createElement('a');a.className='src';a.href=s[1];a.target='_blank';a.rel='noopener noreferrer';a.textContent='Nguồn: '+s[0]+' ↗';el.appendChild(a);});});
 })();
 </script><script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("./sw.js").catch(function(){});});}</script>
+<script>
+(function(){
+var inst=document.getElementById('inst'),help=document.getElementById('ins-help'),dp=null;
+var standalone=window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true;
+if(standalone){inst.hidden=true;return;}
+window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();dp=e;});
+window.addEventListener('appinstalled',function(){inst.hidden=true;help.hidden=true;});
+function show(t,steps){
+help.innerHTML='<span class="x" id="ins-x">\u2715</span><b>'+t+'</b><ol>'+steps.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ol>';
+help.hidden=false;document.getElementById('ins-x').onclick=function(){help.hidden=true;};
+}
+document.getElementById('b-ios').onclick=function(){
+show('Cài trên iPhone / iPad',['Mở trang này bằng <b>Safari</b> (không dùng ứng dụng khác).','Chạm nút <b>Chia sẻ</b> (ô vuông có mũi tên hướng lên) ở thanh dưới.','Cuộn xuống, chọn <b>Thêm vào Màn hình chính</b>.','Chạm <b>Thêm</b> ở góc trên bên phải.']);
+};
+document.getElementById('b-and').onclick=function(){
+if(dp){dp.prompt();dp.userChoice.then(function(){dp=null;});return;}
+show('Cài trên Android',['Mở trang này bằng <b>Chrome</b>.','Chạm menu ba chấm \u22ee ở góc trên bên phải.','Chọn <b>Cài đặt ứng dụng</b> (hoặc <b>Thêm vào màn hình chính</b>).','Chạm <b>Cài đặt</b> để xác nhận.']);
+};
+})();
+</script>
 </body></html>
