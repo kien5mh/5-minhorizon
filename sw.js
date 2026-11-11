@@ -1,8 +1,8 @@
 // 5-min Horizon service worker
 // Trang chính: ưu tiên mạng (để luôn thấy tin mới), mất mạng thì dùng bản đã lưu.
 // Biểu tượng, manifest: ưu tiên bản đã lưu.
-const CACHE = '5min-horizon-v1';
-const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-maskable-512.png', './apple-touch-icon.png'];
+const CACHE = '5min-horizon-v2';
+const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-maskable-512.png', './apple-touch-icon.png', './logo.svg'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));

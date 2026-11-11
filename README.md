@@ -7,6 +7,7 @@ Theo dõi tin tức tài chính - kinh tế - chính sách trong 5 phút. Web ap
 - `manifest.webmanifest`: tên app, màu, biểu tượng
 - `sw.js`: service worker (đọc lại được khi mất mạng; luôn ưu tiên tải bản mới khi có mạng)
 - `icon-*.png`, `apple-touch-icon.png`: biểu tượng app
+- `logo.svg`, `logo-512.png`: logo (mặt trời mọc với 5 tia sáng trên đường chân trời), dùng được cho ảnh đại diện, bài đăng
 
 ## Đưa lên GitHub Pages
 1. Tạo repository mới trên GitHub (ví dụ `5min-horizon`), để chế độ Public.
