@@ -1,6 +1,6 @@
 # 5-min Horizon
 
-Theo dõi tin tức tài chính - kinh tế - chính sách trong 5 phút. Web app (PWA) tĩnh, không cần máy chủ.
+5 phút cập nhật tin tức tài chính - kinh tế - chính sách. Web app (PWA) tĩnh, không cần máy chủ.
 
 ## Cấu trúc
 - `index.html`: toàn bộ trang (giao diện, tin, chỉ số)
