@@ -1,7 +1,7 @@
 {
   "name": "5-min Horizon",
   "short_name": "5-min Horizon",
-  "description": "5 phút cập nhật tin tức tài chính - kinh doanh - công nghệ và chính sách thế giới",
+  "description": "5 phút cập nhật tin tức tài chính - kinh doanh - công nghệ và chính sách toàn cầu",
   "lang": "vi",
   "start_url": "./",
   "scope": "./",
